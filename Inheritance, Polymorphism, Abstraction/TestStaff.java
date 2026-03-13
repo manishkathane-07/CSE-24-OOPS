@@ -1,0 +1,49 @@
+/* 
+A hospital manages different types of staff.
+Question:
+Create a base class Staff with method work().
+Create subclasses:
+1. Doctor
+2. Nurse
+3. Receptionist
+Override work() to display different responsibilities.
+*/
+
+class Staff {
+    void work() {
+        System.out.println("Staff working");
+    }
+}
+
+class Doctor extends Staff {
+    void work() {
+        System.out.println("Doctor treats patients");
+    }
+}
+
+class Nurse extends Staff {
+    void work() {
+        System.out.println("Nurse assists doctor");
+    }
+}
+
+class Receptionist extends Staff {
+    void work() {
+        System.out.println("Receptionist manages appointments");
+    }
+}
+
+public class TestStaff {
+    public static void main(String[] args) {
+        Staff s;
+
+        s = new Doctor();
+        s.work();
+
+        s = new Nurse();
+        s.work();
+
+        s = new Receptionist();
+        s.work();
+    }
+}
